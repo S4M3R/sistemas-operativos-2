@@ -108,7 +108,33 @@ Elimina directorios que estan vacios. Es equivalente a rm -d
 #### rmdir [opciones]
 
 ### ls:
+
+ls lisa contenido y informacion sobre archivos, directorios. ls solo muestra los archivos y directorios en el direcotio actual, de forma alfabetica
+
+`ls [opciones] [ruta]`
+
+#### Opciones
+
+`-a No ignora las entradas empezando con ., mostrando todo el contenido del directorio`
+
+`-r Da vuelta el orden de la salida`
+
+
+
 ### read:
+
+Lee una entrada por teclado y lo guarda en una variable, por defecto es REPLY.
+
+`read [opcines] variable`
+
+#### Opciones:
+
+`-p "texto" Imprime por pantalla un text y despues lee`
+
+`-n num Lee hasta que se ingresen la cantidad de caracteres`
+
+`-s No muestra lo que se esta escribiendo`
+
 ### if:
 
 ### passwd:
