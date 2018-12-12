@@ -19,6 +19,25 @@ Un sistema operativo es el encargado de adiministrar los recursos del ordenador,
 ### Archivo etc/passwd
 ### Archivo etc/shadow
 ## Permisos
+
+Los permisos nos permite limitar a usuarios sobre el uso de los ficheros. Estos se setean con, se utiliza chmod, chown, chgrp. Para mostrar los permisos que tienen los ficheros podemos usar ls -l.
+
+El primer caracter identifica que tipo de archivo es:
+
+- `- Archivo`
+- `d Directorio`
+- `b archivo de blockes`
+- `c Archivo de caracteres especiales`
+- `l Archivo de vinculo o enlace`
+- `p Archivo especial de cauce`
+
+Los siguientes caracteres describen los permisos del prpetario, grupo y resto de usuarios.
+
+- `- sin permiso`
+- `r lectura`
+- `w escritura`
+- `x ejecucion`
+
 ### Nombres
 ### Grupos
 ## Sistema virtual de archivos
@@ -125,7 +144,7 @@ ls lisa contenido y informacion sobre archivos, directorios. ls solo muestra los
 
 `-r Da vuelta el orden de la salida`
 
-
+`-l Muestra mas detalles de los ficheros`
 
 ### read:
 
@@ -157,8 +176,22 @@ Te pide tu contraseña anterior y despues te pide una nueva.
 Si tenes los poderes del superusuario este cambiara la contraseña del usario(samer).
 
 ### chmod:
+
+Es usado para cambiar los permisos de los archivos y directorios
+
+`chmod u=rwx,g=rx,o=r archivo`
+
 ### chown:
+
+Cambia el usuario y grupo dueño del archivos.
+
+`chown [usuario[:grupo]]`
+
 ### chgrp:
+
+Cambia el grupo dueño de un archivo.
+
+`chgrp [opciones] grupos archivos`
 
 ### wc:
 
@@ -412,8 +445,8 @@ Se puede usar las flechas normal o hjkl.
 Es usado para cancelar cualquier comando que estes escribiendo, salir de el modo edicion.
 
 ##### Abrir comandos
-
 `: es el caracter para escribir comandos`
+
 
 
 ### sh:
@@ -422,8 +455,17 @@ shell script es un leguage de interpretacion de comandos, estos comandos van des
 
 #### `sh [archivo]`
 
-### mount:
+### mount
+
+Sirve para montarar dispositivos externos en el sistema de archivos.
+
+`mount -t tipo dispositivo directorio`
+
 ### umount:
+
+Sirve para desmontar dispositiovos externos en el sistema de archivos.
+
+`umount directorio`
 
 ### mkdir:
 
@@ -437,6 +479,119 @@ Este comando te permite crear directorios
 Mustra los usarios actualmente conectados
 
 ### cut:
+
+
+
 ### date:
+
+date sirve para imprimir, o cambiar el valor de la fecha y tiempo del sistema.
+
+`date [opciones] [+formato]`
+
+`-d "string" Muestra la fecha descrita por el string`
+
+#### Formatos
+
+`%a	The abbreviated weekday name (e.g., Sun).`
+
+`%A	The full weekday name (e.g., Sunday).`
+
+`%b	The abbreviated month name (e.g., Jan).`
+
+`%B	Locale's full month name (e.g., January).`
+
+`%c	The date and time (e.g., Thu Mar 3 23:05:25 2005).`
+
+`%C	The current century; like %Y, except omit last two digits (e.g., 20).`
+
+`%d	Day of month (e.g., 01).`
+
+`%D	Date; same as %m/%d/%y.`
+
+`%e	Day of month, space padded; same as %_d.`
+
+`%F	Full date; same as %Y-%m-%d.`
+
+`%g	Last two digits of year of ISO week number (see %G).`
+
+`%G	Year of ISO week number (see %V); normally useful only with %V.`
+
+`%h	Same as %b.`
+
+`%H	Hour (00..23).`
+
+`%I	Hour (01..12).`
+
+`%j	Day of year (001..366).`
+
+`%k	Hour, space padded ( 0..23); same as %_H.`
+
+`%l	Hour, space padded ( 1..12); same as %_I.`
+
+`%m	Month (01..12).`
+
+`%M	Minute (00..59).`
+
+`%n	A newline.`
+
+`%N	Nanoseconds (000000000..999999999).`
+
+`%p	Locale's equivalent of either AM or PM; blank if not known.`
+
+`%P	Like %p, but lower case.`
+
+`%r	Locale's 12-hour clock time (e.g., 11:11:04 PM).`
+
+`%R	24-hour hour and minute; same as %H:%M.`
+
+`%s	Seconds since 1970-01-01 00:00:00 UTC.`
+
+`%S	Second (00..60).`
+
+`%t	A tab.`
+
+`%T	Time; same as %H:%M:%S.`
+
+`%u	Day of week (1..7); 1 is Monday.`
+
+`%U	Week number of year, with Sunday as first day of week (00..53).`
+
+`%V	ISO week number, with Monday as first day of week (01..53).`
+
+`%w	Day of week (0..6); 0 is Sunday.`
+
+`%W	Week number of year, with Monday as first day of week (00..53).`
+
+`%x	Locale's date representation (e.g., 12/31/99).`
+
+`%X	Locale's time representation (e.g., 23:13:48).`
+
+`%y	Last two digits of year (00..99).`
+
+`%Y	Year.`
+
+`%z	+hhmm numeric time zone (e.g., -0400).`
+
+`%:z	+hh:mm numeric time zone (e.g., -04:00).`
+
+`%::z	+hh:mm:ss numeric time zone (e.g., -04:00:00).`
+
+`%:::z	Numeric time zone with ":" to necessary precision (e.g., -04, +05:30).`
+
+`%Z	Alphabetic time zone abbreviation (e.g., EDT).`
+
 ### mv:
+
+Sirve para mover o cambaiar el nombre a un archivo
+
+### Syntaxis
+
+Cambiar el nombre del archivo
+
+`mv [opciones] -T nArchivo nuevoNombre`
+
+Mover el archivo a un directorio
+
+`mv [opciones] fichero [fichero2...] destino`
+
 ### sort:
