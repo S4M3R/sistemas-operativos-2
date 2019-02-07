@@ -1,0 +1,21 @@
+#!bin/bash
+echo "1) Dime buenos dias"
+echo "2) Dime buenas tardes"
+echo "3) Dime buenas noches"
+read -p "Ingresa una de las opciones" op
+
+case $op in
+
+1)
+echo "buenos dias"
+;;
+2)
+echo "buenas tardes"
+;;
+3)
+echo "buenas noches"
+;;
+*)
+echo "La opcion que ingresaste es incorrecta"
+;;
+esac

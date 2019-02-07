@@ -1,0 +1,7 @@
+#!bin/bash
+op=2
+while [ $op -ne 3 ]
+do
+echo "ingresa 3 para dejar de mostrar este texto"
+read op
+done

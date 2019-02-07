@@ -46,6 +46,39 @@ Los siguientes caracteres describen los permisos del prpetario, grupo y resto de
 ### Proceso
 ### Programa
 ### Diferencia
+
+## Archivos:
+
+### /etc/passwd:
+
+#### Estructura:
+
+<nombre>:<password>:<uid>:<gid>:<descripción>:<carpeta>:<shell>
+
+`nombre:` Es el nombre del usuario
+
+`password:`
+
+`x`: la password esta en /etc/shadow
+`!!`: no tiene password
+`!`: usuario bloqueado
+
+`uid`: Es la id del usuario, 0 es root
+
+`gid`: Es la id del grupo principal, puede estar en mas grupos
+
+`carpeta`: Es la carpeta que uaria como carpeta de inicio del usuario
+
+`shell`:
+
+`/bin/bash`: Da los permisos de usar los comandos bash
+
+`/bin/false y /usr/sbin/nologin`: Se le pone a los que no estan logueados
+
+### /etc/shadow
+
+
+
 ## Comandos:
 ### cat:
 cat que significa concatenar es el comando que no permite leer uno o mas archivos y imprimirlo por pantalla.
@@ -366,7 +399,7 @@ Te permite crear una lista de respuestas a un valor. Es como una cadena de if pe
 
 #### Estructura:
 
-case valor-a-comparar in
+`case valor-a-comparar in
 
 valor1)
 
@@ -388,13 +421,13 @@ comandos a ejecutar si ninguno coincide (default)
 
 ;;
 
-esac
+esac`
 
-El valor a comparar puede ser una variable ($variable), el ;; termina la ejecucion del case, *) es para cuando nigunas de las opciones era del mismo valor al del valor a comparar.
+El valor a comparar puede ser una variable ($variable), el ;; termina la ejecucion del case, `*)` es para cuando nigunas de las opciones era del mismo valor al del valor a comparar.
 
 ### top:
 
-El comando top sitve para ver los procesos que se estan llevando a cavo en tiempo real.
+El comando top sirve para ver los procesos que se estan llevando a cavo en tiempo real y informacion sobre su el uso de recursos del mismo.
 
 #### `top [opciones] [columnas]`
 
@@ -480,7 +513,9 @@ Mustra los usarios actualmente conectados
 
 ### cut:
 
+#### Ejemplo:
 
+`cut -d: -f1`
 
 ### date:
 
