@@ -1,7 +1,7 @@
 # Teorico
 ## Sistema Operativo
 ### Definicion:
-Un sistema operativo es el encargado de adiministrar los recursos del ordenador, interpretar comandos, coordinar el hardware, administrar archivos y directorios, manejar los usrarios y sus permisos. Esto no quiere decir que toda hermienta que venga con el SO no es parte del sistema operativo, las aplicaciones como la calculadora, editor de texto y navegador web son programas separados del mismo.Los Sistemas pueden tener distintos tipos de capacidades.
+Un sistema operativo es el encargado de adiministrar los recursos del ordenador, interpretar comandos, coordinar el hardware, administrar archivos y directorios, manejar los usuarios y sus permisos. Esto no quiere decir que toda hermienta que venga con el SO no es parte del sistema operativo, las aplicaciones como la calculadora, editor de texto y navegador web son programas separados del mismo.Los Sistemas pueden tener distintos tipos de capacidades.
 * Multi-usuario: es la capacidad de permitir interactuar con el sistema operativo a 2 o mas usuarios simultaneamente
 * Multi-proceso:
 * Multi-tarea:
@@ -77,6 +77,9 @@ Los siguientes caracteres describen los permisos del prpetario, grupo y resto de
 
 ### /etc/shadow
 
+#### Estructura:
+
+<nombre>:<passwor cifrada>:<Dias desde 1970>:<min entre cambio de pass>:<max de dias de pass >:<dias que avisa antes de cambiar pass>:<dias despues de que password caduque para deshabilitar>:<Fecha de caucidad de cuenta>
 
 
 ## Comandos:
@@ -128,6 +131,8 @@ grep "global regular expression print" proccesa texto linea por linea y imprime 
 `-i No le hace caso a las mayusculas`
 
 `-r Busca recursivamente en los subdirectorios`
+
+`-v Excluir las lineas que no coinciden`
 
 
 ### cd:
