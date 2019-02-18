@@ -1,0 +1,10 @@
+#!/bin/bash
+
+op=1
+
+while [ $op -eq 1 ]
+do
+
+read -p 'escribe un numer diferente a 1 para salir: ' op
+
+done

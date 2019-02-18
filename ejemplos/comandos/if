@@ -1,0 +1,25 @@
+#!/bin/bash
+
+read -p 'Ingresa el numero 1: ' op
+
+if [ $op -eq 1 ]; then
+
+echo "Bien echo"
+
+fi
+
+read -p "Ingresa un numero diferente a $op: " opb
+
+if [ $op -ne $opb ] && [ $op -eq 1 ]; then
+
+echo "Bien echo has seguido todas mis inturciones"
+
+elif [ $op -ne $opb ] || [ $op -eq 1 ]; then
+
+echo "No seguiste la mitad de las cosas que te pedi"
+
+else
+
+echo "No seguiste ningunas de las cosas de las que te pedi"
+
+fi

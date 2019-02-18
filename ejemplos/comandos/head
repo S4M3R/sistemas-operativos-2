@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "|------ejemplos de head------|"
+
+## Muestra las primeras 10 lineas de cancion
+echo "\nLas primeras 10 lineas de cancion:"
+head ej-archivos/cancion
+
+##Muestra las primeras 2 lineas de cancion
+echo "\nLas primeras dos lineas de cancion:"
+head -n2 ej-archivos/cancion
+
+##Muestra las primeras 3 lineas de cancion con el titulo del archivo
+echo "\nLas primeras 3 lineas de:"
+head -vn3 ej-archivos/cancion
+
+##Muestra las primeras 4 lineas de cancion y cancion1
+echo "\nLas primeras 4 lineas de:"
+head -n4 ej-archivos/cancion ej-archivos/cancion1
+
+##Muestra las primeras 5 lineas de cancion y cancion si titulo
+echo "\nLas primeras 5 lineas de cancion y cancion pero sin titulo"
+head -qn5 ej-archivos/cancion ej-archivos/cancion1

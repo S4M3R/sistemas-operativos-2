@@ -1,0 +1,26 @@
+#!/bin/bash
+
+## Muestra lineas, palabras y caracteres de cancion
+echo "lineas palabras caracteres de cancion:"
+wc ej-archivos/cancion
+
+## Mustra lineas, palabras y caracteres de cancion, cancion1 y los totales sumando los 2 archivos
+echo "lineas palabras caracteres de cancion, cancion1 y su suma"
+wc ej-archivos/cancion ej-archivos/cancion1
+
+## Muestra las lineas de cancion
+echo "lineas de cancion"
+wc -l ej-archivos/cancion
+
+## Muestra las palabras de cancion
+echo "palabras de cancion"
+wc -w ej-archivos/cancion
+
+## Muestra los caracteres de cancion
+echo "caracteres de cancion"
+wc -c ej-archivos/cancion
+
+## Muestra las lineas y palabras de cancion, cancion1 y su suma
+echo "lineas palabras de cancion, cancion1 y su suma"
+wc -lw ej-archivos/cancion ej-archivos/cancion1
+

@@ -75,7 +75,7 @@ Los siguientes caracteres describen los permisos del prpetario, grupo y resto de
 
 `/bin/false y /usr/sbin/nologin`: Se le pone a los que no estan logueados
 
-### /etc/shadow
+### /etc/shadow:
 
 #### Estructura:
 
@@ -439,7 +439,7 @@ El comando top sirve para ver los procesos que se estan llevando a cavo en tiemp
 
 ### ps:
 
-Lista los precesos activos que estan en el sistema.
+Lista los procesos activos que estan en el sistema.
 
 `ps [opciones]`
 

@@ -1,0 +1,61 @@
+#!/bin/bash
+op=0
+
+while [ $op -ne 4 ]; do
+
+clear
+echo "1) Crear directorio"
+echo "2) Eliminar directorio"
+echo "3) Mostrar users con bin/bash"
+echo "4) Salir"
+read -p "Ingresa una opcion: " op
+
+case $op in
+
+1)
+	read -p "Ingresa el nombre para el directorio: " dir
+	if [ -d $dir ]; then
+
+		echo "Ya existe"
+		sleep 2
+	else
+		mkdir $dir
+		if [ -d $dir ]; then
+		echo "Directorio $dir creado"
+		sleep 2
+		fi
+	fi
+;;
+2)
+	read -p "Ingresa el nombre del directorio: " dir
+	if [ -d $dir ]; then
+		rm -r $dir
+		if [ -d $dir ]; then
+			echo "$dir no se pudo eliminar"
+			sleep 2
+		else
+			echo "$dir eliminado"
+			sleep 2
+		fi
+	else
+		echo "El directorio no existe"
+		sleep 2
+	fi
+;;
+3)
+
+	cat /etc/passwd | grep bin/bash | cut -d":" -f1
+	sleep 2
+;;
+4)
+	echo "Saliendo del script"
+	sleep 2
+;;
+*)
+	echo "Opcion no dentro de las opciones"
+	sleep 1
+;;
+esac
+
+done
+ clear

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "Te gusta la comida, s/n: " op
+
+
+case $op in 
+
+"s")
+	echo "Muy bien"
+;;
+
+"n")
+	echo "Que comes? XD"
+;;
+
+*)
+	echo "$op no es una respuesta valida"
+;;
+
+esac

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "|------ejemplos de Tail------|"
+
+## Muestra las ultimas 10 lineas de cancion
+echo "\nLas ultimas 10 lineas de cancion:"
+tail ej-archivos/cancion
+
+##Muestra las ultimas 2 lineas de cancion
+echo "\nLas ultimas dos lineas de cancion:"
+tail -n2 ej-archivos/cancion
+
+##Muestra las ultimas 3 lineas de cancion con el titulo del archivo
+echo "\nLas ultimas 3 lineas de:"
+tail -vn3 ej-archivos/cancion
+
+##Muestra las ultimas 4 lineas de cancion y cancion1
+echo "\nLas ultimas 4 lineas de:"
+tail -n4 ej-archivos/cancion ej-archivos/cancion1
+
+##Muestra las ultimas 5 lineas de cancion y cancion si titulo
+echo "\nLas ultimas 5 lineas de cancion y cancion pero sin titulo"
+tail -qn5 ej-archivos/cancion ej-archivos/cancion1
